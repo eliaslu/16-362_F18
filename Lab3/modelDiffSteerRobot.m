@@ -30,10 +30,10 @@ th(end+1) = 0;
 for k = 1:length(vr)-1
     % update linear and angular velocity of robot
     V = (vr(k) + vl(k))/2;
-    if k < 200
+    if k < 240
         omega = (vr(k) - vl(k))/W + 0.25;
     else 
-        omega = (vr(k) - vl(k))/W - 0.1;
+        omega = (vr(k) - vl(k))/W - 0.2;
     end
     
     % calculate next position    
