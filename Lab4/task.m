@@ -120,5 +120,9 @@ while new_time < 5.33 + t_delay
     pause(0.002);
 end
 robot.sendVelocity(0,0);
+% if PID_ON
+%     offset = 1 - cur_dist;
+%     real_dist = real_dist + offset;
+% end
 pause(0.02);
 robot.shutdown();
