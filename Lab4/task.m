@@ -49,6 +49,7 @@ end
 
 % Continuous plot
 figure;
+
 f1 = plot(time_array,dist_array);
 hold on 
 f2 = plot(time_array, real_dist_array);
