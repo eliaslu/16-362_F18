@@ -7,7 +7,7 @@ FEED_WEIGHT = 0.5;
 BALANCE_WEIGHT = 1;
 
 % /* PID control constants */
-PID_ON = 0;
+PID_ON = 1;
 PID_PTERM = 1.11;
 PID_ITERM = 0.0;
 PID_DTERM = 0.08;
@@ -41,12 +41,7 @@ sgn = 1;
 cur_dist = 0.0;
 cur_vel = 0.0;
 prev_vel = 0.0;
-if PID_ON
-    t_delay = 0.1;
-else
-    t_delay = 0.385;
-end
-
+t_delay = 0.18;
 % Continuous plot
 figure;
 f1 = plot(time_array,dist_array);
@@ -122,6 +117,7 @@ end
 robot.sendVelocity(0,0);
 % if PID_ON
 %     offset = 1 - cur_dist;
+%     cur_dist = cur_dist + offset;
 %     real_dist = real_dist + offset;
 % end
 pause(0.02);

@@ -1,6 +1,0 @@
-function uref = trapezoidalVelocityProfile(t,amx,vmax,dist,sgn)
-
-    
-
-
-end
